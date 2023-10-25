@@ -13,9 +13,9 @@ scalar = pickle.load(open('scaling.pkl','rb'))
 def home():
     return render_template('home.html')
 
+# input received through api
 @app.route('/predict_api', methods=['POST'])
 
-# input received through api
 def predict_api():
     data=request.json['data']
     print(data)
